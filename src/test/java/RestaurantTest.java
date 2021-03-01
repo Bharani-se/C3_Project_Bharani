@@ -70,6 +70,15 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>ORDER PRICE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void adding_items_to_the_menu_to_display_order_price() {
+        callRestoObject("Amelie's cafe", "Chennai", LocalTime.parse("10:30:00"), LocalTime.parse("22:00:00"));
+        String orderprice= restaurant.getTotalOrder("Sweet corn soup","Vegetable lasagne","Spring Rolls");
+        assertEquals("Your order will cost:638",orderprice);
 
+    }
+
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>ORDER PRICE<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 }

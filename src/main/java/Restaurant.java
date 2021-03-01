@@ -70,6 +70,9 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+    public String getTotalOrder(String... itemNames) {
+        return null;
+    }
 
 
 }
