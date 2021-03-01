@@ -71,7 +71,16 @@ public class Restaurant {
         return name;
     }
     public String getTotalOrder(String... itemNames) {
-        return null;
+        int totalprice=0;
+        for(String s:itemNames) {
+            for (Item i : menu) {
+                if (i.getName().equals(s)) {
+                    totalprice = totalprice + i.getPrice();
+
+                }
+            }
+        }
+        return "Your order will cost:"+totalprice;
     }
 
 
